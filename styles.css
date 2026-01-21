@@ -36,11 +36,12 @@ section {
   flex-wrap: wrap;
 }
 
-.gallery img {
-  width: 100%;
-  max-width: 200px;
-  margin: 10px;
+img { 
+    max-width: auto; 
+    height: 400px; 
+    margin: 10px; 
 }
+
 
 .blog-posts {
   margin-top: 20px;
