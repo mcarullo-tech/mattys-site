@@ -6,6 +6,11 @@ body {
   padding: 0;
   background: #1a1a1a;
   color: #e0e0e0;
+  --accent: #00d4ff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent);
 }
 
 header {
@@ -31,12 +36,13 @@ nav ul li a {
   text-decoration: none;
   padding: 5px 8px;
   display: inline-block;
-  transition: transform 0.2s ease, text-shadow 0.2s ease;
+  transition: transform 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
 }
 
 nav ul li a:hover {
-  transform: scale(1.15);            /* text becomes slightly larger */
-  text-shadow: 0 0 8px rgba(255,255,255,0.8); /* glowing shadow */
+  transform: scale(1.15);
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent), 0 0 20px rgba(0, 212, 255, 0.5);
 }
 
 
@@ -90,19 +96,20 @@ img:hover {
   text-decoration: none;
   margin: 10px 0;
   border: 1px solid #444;
-  transition: 0.2s ease;
+  transition: 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .blog-card:hover {
   background: #333;
   transform: translateY(-3px);
-  border-color: #666;
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
 }
 
 .blog-card a {
-  color: inherit;             /* makes link adopt normal text color */
-  text-decoration: none;      /* removes underline */
-  cursor: pointer;            /* keeps clickable feel */
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .blog-card a:hover {
@@ -119,7 +126,12 @@ img:hover {
 }
 
 .blog-nav a {
-  color: inherit;             /* makes link adopt normal text color */
-  text-decoration: none;      /* removes underline */
-  cursor: pointer; 
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+  transition: text-shadow 0.2s ease;
+}
+
+.blog-nav a:hover {
+  text-shadow: 0 0 8px var(--accent);
 }
