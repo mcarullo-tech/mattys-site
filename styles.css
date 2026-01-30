@@ -1,6 +1,6 @@
 /* GLOBAL RESET + BASE */
 body {
-  background: url("images/sleeping_kitty.PNG") repeat fixed;
+  background: url("../images/sleeping_kitty.PNG") repeat fixed;
   background-size: 200px;
   color: #e6e6e6;
   margin: 0;
